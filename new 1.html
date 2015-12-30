@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{margin:40px; background:#666;}
+#new_canvas{ background:#FFF; border:#000 1px solid;}
+#new_canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
+</style>
+<script>
+function draw(){
+var ctx= document.getElementById('new_canvas').getContext('2d');
+ctx.beginPath();
+ctx.moveTo(0,350);
+ctx.lineTo(300,350);
+ctx.lineTo(300,550);
+
+ctx.lineTo(450,550);
+ctx.lineTo(450,350);
+
+ctx.lineTo(800,350);
+ctx.lineTo(800,200);
+
+ctx.lineTo(450,200);
+ctx.lineTo(450,0);
+ctx.lineTo(300,0);
+
+ctx.lineTo(300,200);
+ctx.lineTo(0,200);
+ctx.lineTo(0,300);
+
+
+//ctx.fill();//
+ctx.closePath();
+ctx.stroke();
+
+
+}
+window.onload=draw;
+</script>
+
+</head>
+<body>
+<canvas id="new_canvas" width="800" height="550" ></canvas>
+</body>
+
+</html>
